@@ -1,538 +1,88 @@
+
 {
-  "code": 0,
-  "currentTime": 1642721456,
-  "message": "成功",
-  "data": [
-    {
-      "background": "",
-      "data": {
-        "ad_video": {
-          "ad_id": "7520318",
-          "coin": 40,
-          "cooldown_conf": {
-            "slot_id": "9005924"
-          },
-          "desc": "看视频",
-          "key": "ad_video",
-          "next_time": -1,
-          "replace_key": "lijitixian",
-          "resource_type": "3431",
-          "step_key": "jilishipin1",
-          "title": "激励视频"
-        },
-        "member_info": {
-          "avatar": "https://thirdwx.qlogo.cn/mmopen/vi_32/Q3auHgzwzM77cQskTyYiab94n6BRItYgSFMwqWe6NRicKXhnibXOBXo0oSibKp6O2XHKEssu9W9W80rQ9ibQvZZtOgA/132?imageView2/1/h/240/w/240/q/90",
-          "key": "member_info",
-          "member_id": "1372819757",
-          "nickname": "欢乐马",
-          "telephone": "90118491876",
-          "wx_nickname": "欢乐马",
-          "zfb_nickname": ""
-        },
-        "message_info": {
-          "key": "message_info",
-          "login_need": "0",
-          "login_show": "0",
-          "title": "消息"
-        },
-        "my_message": {
-          "key": "my_message",
-          "login_need": "0",
-          "login_show": "0",
-          "title": "查看个人主页"
-        }
-      },
-      "key": "heard_module",
-      "name": "头部模块",
-      "sort": 0,
-      "style": 1
-    },
-    {
-      "background": "",
-      "data": [
-        {
-          "icon": "http://static.1sapp.com/image/sp/2019/12/04/212f8b6498c0a1a41b20a4ab28bf0512.png",
-          "jump_url": "https://h5ssl.1sapp.com/qukanweb/inapp/task_active/index.html",
-          "key": "sign_chunjing",
-          "title": "明日+198金币"
-        }
-      ],
-      "key": "sign_info",
-      "name": "签到",
-      "sort": 2,
-      "style": 1
-    },
-    {
-      "background": "",
-      "data": [
-        {
-          "corner": "",
-          "desc": "",
-          "icon": "http://static.1sapp.com/image/sp/2019/11/29/005c5b829aeb4e6e1fd66924ba5c5421.png",
-          "key": "zhongcai",
-          "location": "https://newidea4-gamecenter-frontend.1sapp.com/jump/prod/index.html?source=286199&app_id=a3yYtLefcAef&tag_id=100&hijack_page=0&isx5=1",
-          "login_need": 1,
-          "name": "种菜赚金币",
-          "weight": 5
-        },
-        {
-          "cooldown_conf": {
-            "slot_id": "9006274"
-          },
-          "corner": "",
-          "desc": "",
-          "icon": "http://static.1sapp.com/image/sp/2020/04/01/88b4384a4e94a521ef4d078b8228c354.png",
-          "key": "uqlive",
-          "location": "LCScheme://info/gotoLiveViewController?type=310",
-          "login_need": 1,
-          "name": "歌舞直播",
-          "weight": 4
-        },
-        {
-          "cooldown_conf": {
-            "slot_id": "9006274"
-          },
-          "corner": "",
-          "desc": "",
-          "icon": "http://static.1sapp.com/image/sp/2019/11/29/611633a61f06f48f82959df00587efc1.png",
-          "key": "xingyunchoujiang",
-          "location": "https://cfg.aiclk.com/hdjump?iclicashid=7568984&isMotivated=1",
-          "login_need": 1,
-          "name": "幸运抽大奖",
-          "weight": 3
-        },
-        {
-          "corner": "",
-          "desc": "",
-          "icon": "http://static.1sapp.com/image/sp/2019/11/29/9ac4c9c4c514ad5d544753249bedbe70.png",
-          "key": "lijitixian",
-          "location": "https://h5ssl.1sapp.com/qukanweb/inapp/withdraw/index.html?source=C293003",
-          "login_need": 1,
-          "name": "立即提现",
-          "weight": 2
-        }
-      ],
-      "key": "coin_info",
-      "name": "金币模块",
-      "newCoinSystem": {
-        "allCoins": "237,990",
-        "allCoinsFormat": "237990",
-        "allRemainderCoins": "51,330",
-        "allRemainderCoinsFormat": "51330",
-        "balance_hide": 0,
-        "read_time": {
-          "gift_flg": 0,
-          "time": "0"
-        },
-        "remainderCoins": "51,330",
-        "remainderCoinsFormat": "51330",
-        "todayCoins": "2,502",
-        "todayCoinsFormat": "2502"
-      },
-      "sort": 90,
-      "style": 2
-    },
-    {
-      "background": "",
-      "data": [
-        {
-          "slotId": 7256666,
-          "type": "ad"
-        },
-        {
-          "click": "https://h5ssl.1sapp.com/activity_dest/family_account/index.html?source=B219002",
-          "img": "https://static.1sapp.com/image/sp/2020/07/15/5f0ea134bccc0.png?source=B219002"
-        },
-        {
-          "slotId": 7256666,
-          "type": "ad"
-        },
-        {
-          "click": "https://h5ssl.1sapp.com/activity_dest/happy_taobao/index.html?adid=201909071710&source=2021630101856",
-          "img": "https://static.1sapp.com/image/sp/2021/06/30/60dbd49029872.png?source=2021630101856"
-        }
-      ],
-      "key": "loop_list",
-      "name": "轮播图模块",
-      "sort": 70,
-      "style": 4
-    },
-    {
-      "background": "",
-      "data": [
-        {
-          "corner": "新",
-          "desc": "",
-          "icon": "http://static.1sapp.com/image/sp/2021/09/24/3708dc28e681406adb5a1b268c5257d4.png",
-          "key": "mianduimian",
-          "location": "https://cpc-activity.aiclk.com/RedPacket/index.html?ishidestatus=3&full=1&fullScreen=1",
-          "login_need": 1,
-          "name": "助力开红包",
-          "weight": 4
-        },
-        {
-          "corner": "",
-          "desc": "",
-          "icon": "http://static.1sapp.com/image/sp/2019/11/29/c9bfe479a621e1ea5706782a9138e164.png",
-          "key": "qinyouhongbao",
-          "location": "http://h5ssl.1sapp.com/activity_dest/family_account/index.html?source=C219028",
-          "login_need": 1,
-          "name": "亲友红包",
-          "weight": 3
-        },
-        {
-          "corner": "开宝箱",
-          "desc": "",
-          "icon": "http://static.1sapp.com/image/sp/2019/11/29/85e98a67f0727655d4610916458914d2.png",
-          "key": "yaoqinghaoyou",
-          "location": "https://h5ssl.1sapp.com/activity_dest/yq/index.html?source=C2046201905152000",
-          "login_need": 1,
-          "name": "邀请好友",
-          "weight": 2
-        },
-        {
-          "corner": "低价",
-          "desc": "",
-          "icon": "http://static.1sapp.com/image/sp/2021/09/24/568471d86634bdc0bdc2003052ca27d4.png",
-          "key": "shopping",
-          "location": "https://h5ssl.1sapp.com/activity_dest/withdraw/index.html?source=IOSGQ080501",
-          "login_need": 1,
-          "name": "金币商城",
-          "weight": 1
-        }
-      ],
-      "key": "apprentice",
-      "name": "邀请好友",
-      "sort": 80,
-      "style": 3
-    },
-    {
-      "data": [
-        {
-          "bubble": {
-            "enable": 0,
-            "end": "",
-            "show_max": 0,
-            "start": "",
-            "text": "",
-            "type": ""
-          },
-          "extends": {},
-          "gif": "https://static.1sapp.com/image/sp/2020/03/26/5e7c490331bf0.png",
-          "icon": "https://static.1sapp.com/image/sp/2020/03/26/5e7c490331bf0.png",
-          "is_gif_loop": "0",
-          "is_static_cache": "0",
-          "is_wlx": "0",
-          "key": "my_attention",
-          "location": "",
-          "login_need": 1,
-          "login_show": 0,
-          "title": "我的关注",
-          "weight": 4
-        },
-        {
-          "bubble": {
-            "enable": 0,
-            "end": "",
-            "show_max": 0,
-            "start": "",
-            "text": "",
-            "type": ""
-          },
-          "extends": {},
-          "gif": "https://static.1sapp.com/image/sp/2020/03/26/5e7c49198acce.png",
-          "icon": "https://static.1sapp.com/image/sp/2020/03/26/5e7c49198acce.png",
-          "is_gif_loop": "0",
-          "is_static_cache": "0",
-          "is_wlx": "0",
-          "key": "comment",
-          "location": "https://h5ssl.1sapp.com/qukan_new2/dest/history/inapp/history/comment.html?clientPage=hsy&r=1",
-          "login_need": 1,
-          "login_show": 0,
-          "title": "我的评论",
-          "weight": 3
-        },
-        {
-          "bubble": {
-            "enable": 0,
-            "end": "",
-            "show_max": 0,
-            "start": "",
-            "text": "",
-            "type": ""
-          },
-          "extends": {},
-          "gif": "https://static.1sapp.com/image/sp/2020/03/26/5e7c492b2119d.png",
-          "icon": "https://static.1sapp.com/image/sp/2020/03/26/5e7c492b2119d.png",
-          "is_gif_loop": "0",
-          "is_static_cache": "0",
-          "is_wlx": "0",
-          "key": "favorite",
-          "location": "",
-          "login_need": 1,
-          "login_show": 1,
-          "title": "我的收藏",
-          "weight": 2
-        },
-        {
-          "bubble": {
-            "enable": 0,
-            "end": "",
-            "show_max": 0,
-            "start": "",
-            "text": "",
-            "type": ""
-          },
-          "extends": {},
-          "gif": "https://static.1sapp.com/image/sp/2020/03/26/5e7c4938f1b0c.png",
-          "icon": "https://static.1sapp.com/image/sp/2020/03/26/5e7c4938f1b0c.png",
-          "is_gif_loop": "0",
-          "is_static_cache": "0",
-          "is_wlx": "0",
-          "key": "history",
-          "location": "https://h5ssl.1sapp.com/qukan_new2/dest/history/inapp/history/history.html?clientPage=hsy&r=1",
-          "login_need": 1,
-          "login_show": 0,
-          "title": "历史记录",
-          "weight": 1
-        }
-      ],
-      "hide_title": true,
-      "key": "my_manage",
-      "location": "",
-      "name": "我的管理",
-      "sort": 10,
-      "style": 5
-    },
-    {
-      "data": [
-        {
-          "bubble": {
-            "enable": 0,
-            "end": "",
-            "show_max": "",
-            "start": "",
-            "text": "",
-            "type": ""
-          },
-          "extends": {},
-          "gif": "",
-          "icon": "",
-          "is_gif_loop": "0",
-          "is_static_cache": "0",
-          "is_wlx": "0",
-          "key": "zongjie",
-          "location": "https://h5-activity.1sapp.com/qtt_search/fe_activity/inventory.html?source=8",
-          "login_need": 1,
-          "login_show": 1,
-          "title": "年度总结",
-          "weight": 35
-        },
-        {
-          "bubble": {
-            "enable": 0,
-            "end": "",
-            "show_max": "",
-            "start": "",
-            "text": "",
-            "type": ""
-          },
-          "extends": {},
-          "gif": "",
-          "icon": "",
-          "is_gif_loop": "0",
-          "is_static_cache": "0",
-          "is_wlx": "0",
-          "key": "xiaoyu",
-          "location": "https://webapp-insurance.haozanrs.com/assist/index.html?qhz_source=grzxios_0814",
-          "login_need": 1,
-          "login_show": 0,
-          "title": "小鱼互助",
-          "weight": 29
-        },
-        {
-          "bubble": {
-            "enable": 0,
-            "end": "",
-            "show_max": "",
-            "start": "",
-            "text": "",
-            "type": ""
-          },
-          "extends": {},
-          "gif": "",
-          "icon": "",
-          "is_gif_loop": "0",
-          "is_static_cache": "0",
-          "is_wlx": "0",
-          "key": "hongbao",
-          "location": "https://cpc-activity.aiclk.com/RedPacket/index.html?ishidetitle=1&full=1&fullScreen=1",
-          "login_need": 1,
-          "login_show": 1,
-          "title": "助力开红包",
-          "weight": 26
-        },
-        {
-          "bubble": {
-            "enable": 0,
-            "end": "",
-            "show_max": "",
-            "start": "",
-            "text": "",
-            "type": ""
-          },
-          "extends": {},
-          "gif": "",
-          "icon": "",
-          "is_gif_loop": "0",
-          "is_static_cache": "0",
-          "is_wlx": "0",
-          "key": "zhongcai",
-          "location": "https://newidea4-gamecenter-frontend.1sapp.com/jump/prod/index.html?source=286190&app_id=a3yYtLefcAef&tag_id=990",
-          "login_need": 1,
-          "login_show": 0,
-          "title": "种菜赚金币",
-          "weight": 25
-        },
-        {
-          "bubble": {
-            "enable": 0,
-            "end": "",
-            "show_max": "",
-            "start": "",
-            "text": "",
-            "type": ""
-          },
-          "extends": {},
-          "gif": "",
-          "icon": "",
-          "is_gif_loop": "0",
-          "is_static_cache": "0",
-          "is_wlx": "0",
-          "key": "qinqinghao",
-          "location": "https://h5ssl.1sapp.com/activity_dest/family_account/index.html?source=E219009",
-          "login_need": 1,
-          "login_show": 0,
-          "title": "领亲友红包",
-          "weight": 20
-        },
-        {
-          "bubble": {
-            "enable": 0,
-            "end": "",
-            "show_max": "",
-            "start": "",
-            "text": "",
-            "type": ""
-          },
-          "extends": {},
-          "gif": "",
-          "icon": "",
-          "is_gif_loop": "0",
-          "is_static_cache": "0",
-          "is_wlx": "0",
-          "key": "rotor1",
-          "location": "https://cfg.aiclk.com/hdjump?iclicashid=7568984&isMotivated=1",
-          "login_need": 1,
-          "login_show": 0,
-          "title": "幸运大抽奖",
-          "weight": 17
-        },
-        {
-          "bubble": {
-            "enable": 0,
-            "end": "",
-            "show_max": "",
-            "start": "",
-            "text": "",
-            "type": ""
-          },
-          "extends": {},
-          "gif": "",
-          "icon": "",
-          "is_gif_loop": "0",
-          "is_static_cache": "0",
-          "is_wlx": "0",
-          "key": "shouji",
-          "location": "https://h5-activity.1sapp.com/qtt_search/fe_activity/wheel.html?ad=7506802",
-          "login_need": 1,
-          "login_show": 0,
-          "title": "免费领手机",
-          "weight": 13
-        },
-        {
-          "bubble": {
-            "enable": 0,
-            "end": "",
-            "show_max": "",
-            "start": "",
-            "text": "",
-            "type": ""
-          },
-          "extends": {},
-          "gif": "",
-          "icon": "",
-          "is_gif_loop": "0",
-          "is_static_cache": "0",
-          "is_wlx": "0",
-          "key": "uqlive",
-          "location": "LCScheme://info/gotoLiveViewController?type=12",
-          "login_need": 1,
-          "login_show": 0,
-          "title": "直播",
-          "weight": 3
-        },
-        {
-          "bubble": {
-            "enable": 0,
-            "end": "",
-            "show_max": "",
-            "start": "",
-            "text": "",
-            "type": ""
-          },
-          "extends": {},
-          "gif": "",
-          "icon": "",
-          "is_gif_loop": "0",
-          "is_static_cache": "0",
-          "is_wlx": "0",
-          "key": "make_money",
-          "location": "https://h5ssl.1sapp.com/qukanweb/inapp/feedback/index.html",
-          "login_need": 1,
-          "login_show": 0,
-          "title": "帮助与反馈",
-          "weight": 2
-        },
-        {
-          "bubble": {
-            "enable": 0,
-            "end": "",
-            "show_max": "",
-            "start": "",
-            "text": "",
-            "type": ""
-          },
-          "extends": {},
-          "gif": "",
-          "icon": "",
-          "is_gif_loop": "0",
-          "is_static_cache": "0",
-          "is_wlx": "0",
-          "key": "setting",
-          "location": "",
-          "login_need": 1,
-          "login_show": 0,
-          "title": "设置",
-          "weight": 1
-        }
-      ],
-      "hide_title": true,
-      "key": "ios_menu",
-      "location": "",
-      "name": "菜单栏",
-      "sort": 5,
-      "style": 6
+   "id": '🈯️Test度娘Ex',
+   "name":'🈯️test@🚸',
+      "descs_html": [
+  ` <a href="http://acaigletekiiphone.local">
+    <button>192.168！VLC</button></a>
+    <p>VLC媒体</p></a>
+
+   <link data-n-head="ssr" rel="canonical"  class="video-player vjs-custom-skin"   //确定播放器是否具有用户可以与之交互的控件。没有控件，启动视频播放的唯一方法是使用autoplay属性或通过Player API。
+    autoplay: "true",
+   autoplay: "muted", // //自动播放属性,muted:静音播放
+   controls //控制键
+   preload="auto"  //建议浏览器是否应在加载元素后立即开始下载视频数据。
+ loop: "true", // 是否视频一结束就重新开始
+ aspectRatio: '16:9'
+   poster="https://www.hxcsxs.asia/upload/vod/20220227-1/e2710ff91ccc20f8a12f481596f5b579.jpg"
+          ref="videoPlayer"=playsinline="true"=options="playerOptions"=controls="playerVideos">    
+<source
+     href='https://raw.githubusercontent.com/Helloforfree/miss/main/xiaoc.html' // 视频地址-改变它的值播放的视频会改变https://www.hxcsxs.asia>
+<button><video> go!go!go!</video></button>
+
+</link> 
+
+<iframe src="https://www.xvideos.com/embedframe/63249047" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+
+<a href="https://www.xvideos.com/video63249047/_md-0017_003_">
+    <button><img src="https://kkimgs.yisou.com/ims?kt=url&at=smstruct&key=aHR0cDovL2dzczAuYmFpZHUuY29tLzl2bzNkU2FnX3hJNGtoR2tvOVdUQW5GNmhoeS96aGlkYW8vd2g9NDUwLDYwMC9zaWduPTE4MDUwZDA3ZDU1NDU2NGVlNTMwZWMzZDg2ZWViMGI0L2Q0MzliNjAwM2FmMzNhODdiODAxMzEwZWNlNWMxMDM4NTM0M2I1YjEuanBn&sign=yx:PhSR-nnqR8k-XF-yUijTxgDWQmE=&tv=400_400" alt="图片" height="300px">点我跳转xvid到度娘!!！</button>
+</a>`
+    ]
+},
+
+
+
+
+{
+   "id": '🈯️Tes🌴',
+   "name":'🈯️test@🚸',
+      "descs_html": [
+  ` <a href="http://acaigletekiiphone.local">
+    <button><img src="https://kkimgs.yisou.com/ims?kt=url&at=ori&key=aHR0cDovL3BpYzE0Ni5odWl0dS5jb20vcGljLzIwMjAwNzI0LzE5NDVfMjAyMDA3MjQxMzMxMTQzMjYwNjBfMC5qcGc=&sign=yx:9YQhDPWZ62PiRuCbT-nFQSUWg7o=&tv=0_0" alt="图片" height="300px"> 是我的思念 ~~ <h1>192.168！VLC</h1></button></a>
+    <p>VLC媒体</p></a>
+
+
+   <video class="video-player vjs-custom-skin"   //确定播放器是否具有用户可以与之交互的控件。没有控件，启动视频播放的唯一方法是使用autoplay属性或通过Player API。
+    autoplay: "true",
+   autoplay: "muted", // //自动播放属性,muted:静音播放
+   controls //控制键
+   preload="auto"  //建议浏览器是否应在加载元素后立即开始下载视频数据。
+ loop: "true", // 是否视频一结束就重新开始
+ aspectRatio: '16:9'
+   poster="https://www.hxcsxs.asia/upload/vod/20220227-1/e2710ff91ccc20f8a12f481596f5b579.jpg"
+          ref="videoPlayer"=playsinline="true"=options="playerOptions"=controls="playerVideos">
+     
+<source
+     src='https://cdn.hxcsxs.cloud/vod/20220131/newyear/index.m3u8?sign=917fa39d0dd90a48032e3fa99e469e74fd9694c369b0c9f325d5289869ce28e1ab4a771026bc0de17da763cb06766b62' // 视频地址-改变它的值播放的视频会改变
+     type='video/mp4'>
+</video>
+
+   
+
+<a href="https://raw.githubusercontent.com/Helloforfree/miss/main/xiaoc.html">
+    <button><h1>@梦 <img src="https://kkimgs.yisou.com/ims?kt=url&at=smstruct&key=aHR0cDovL3BpYzMxLnBob3RvcGhvdG8uY24vMjAxNDA0MDEvMDAyMTAzMzg3NTg2NzkwMF9iLmpwZw==&sign=yx:wK_7L-VZzXFZKkVTzNkcgKFoPXc=&tv=400_400" alt="图片" height="300px"> 是我的思念 ~~ </h1>点我跳转到度娘！</button>
+</a>
+
+  <!--百度自动推送-->
+                                    
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
     }
-  ]
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+                                    <!--百度统计-->
+
+ `
+    ]
 }
+
+
+
+

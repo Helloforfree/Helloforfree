@@ -10,22 +10,7 @@
       "notes": [
         {
           "name": "新增",
-          "descs": [
-             ` <a href="http://acaigletekiiphone.local">
-    <button><img src="https://kkimgs.yisou.com/ims?kt=url&at=ori&key=aHR0cDovL3BpYzE0Ni5odWl0dS5jb20vcGljLzIwMjAwNzI0LzE5NDVfMjAyMDA3MjQxMzMxMTQzMjYwNjBfMC5qcGc=&sign=yx:9YQhDPWZ62PiRuCbT-nFQSUWg7o=&tv=0_0" alt="图片" height="300px"> 是我的思念 ~~ <h1>192.168！VLC</h1></button></a>
-    <p>VLC媒体</p></a>
-
-
-   <video class="video-player vjs-custom-skin"   //确定播放器是否具有用户可以与之交互的控件。没有控件，启动视频播放的唯一方法是使用autoplay属性或通过Player API。
-    autoplay: "true",
-   autoplay: "muted", // //自动播放属性,muted:静音播放
-   controls //控制键
-   preload="auto"  //建议浏览器是否应在加载元素后立即开始下载视频数据。
- loop: "true", // 是否视频一结束就重新开始
- aspectRatio: '16:9'
-   poster="https://img-blog.csdnimg.cn/b1edc951de1641a6930ab90588f72db6.gif"
-          ref="videoPlayer"=playsinline="true"=options="playerOptions"=controls="playerVideos">
-     
+          "descs_html": [`   
 <source
      src='http://video-ddvideo.1sapp.com/8d078c198ac25039866da4ec637d6c6b/nhhd.mp4' // 视频地址-改变它的值播放的视频会改变
      type='video/mp4'>

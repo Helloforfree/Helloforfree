@@ -11,11 +11,11 @@
         {
           "name": "新增",
           "descs_html": [
-            "一键订阅",
+            `"一键订阅",
             "点击链接就可以自动添加订阅, 免去手动添加的麻烦",
             "制作一键订阅地址: ",
             "http://boxjs.com/#/sub/add/经过encodeURIComponent()订阅地址",
-            "如: http://boxjs.com/#/sub/add/https%3A%2F%2Fraw.githubusercontent.com%2Fchavyleung%2Fscripts%2Fmaster%2Fbox%2Fchavy.boxjs.json"
+            "如: http://boxjs.com/#/sub/add/https%3A%2F%2Fraw.githubusercontent.com%2Fchavyleung%2Fscripts%2Fmaster%2Fbox%2Fchavy.boxjs.json"`
           ]
         },
         {

@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.4.x/dist/vuetify.min.css" rel="stylesheet" />
-    <script src=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <style>
       #BG {
         position: fixed;
@@ -115,12 +115,16 @@
               <v-menu bottom left v-if="!isLoading && isMainView">
                 <template #activator="{ on }">
                   <v-btn v-on="on" icon class="ml-n3">
-                    <v-avatar size="26"><img :src="env.icons[iconEnvThemeIdx]" /></v-avatar>
+                    <v-avatar size="26">
+                      <img :src="env.icons[iconEnvThemeIdx]" />
+                    </v-avatar>
                   </v-btn>
                 </template>
                 <v-list>
                   <v-list-item dense v-for="(env, envIdx) in envs" :key="env.id" @click="switchEnv(env.id)">
-                    <v-list-item-avatar size="26"><v-img :src="env.icon" /></v-list-item-avatar>
+                    <v-list-item-avatar size="26">
+                      <v-img :src="env.icon" />
+                    </v-list-item-avatar>
                     <v-list-item-title>{{env.id}}</v-list-item-title>
                   </v-list-item>
                 </v-list>
@@ -133,7 +137,9 @@
             </template>
             <template #append>
               <v-btn icon class="mr-n3" @click="ui.naviDrawer.show = true">
-                <v-avatar size="26"><v-icon>mdi-menu</v-icon></v-avatar>
+                <v-avatar size="26">
+                  <v-icon>mdi-menu</v-icon>
+                </v-avatar>
               </v-btn>
             </template>
           </v-autocomplete>
@@ -147,7 +153,9 @@
                 </v-btn>
                 <v-text-field ref="search" v-model="ui.searchBar.input" :label="title" autofocus hide-details solo></v-text-field>
                 <v-btn icon @click="open(box.syscfgs.orz3.repo)">
-                  <v-avatar size="26"><img :src="box.syscfgs.orz3.icon" /></v-avatar>
+                  <v-avatar size="26">
+                    <img :src="box.syscfgs.orz3.icon" />
+                  </v-avatar>
                 </v-btn>
               </v-toolbar>
             </v-card-subtitle>
@@ -159,7 +167,9 @@
                   @click="ui.searchDialog.show = false, switchAppView(app.id)"
                   dense
                 >
-                  <v-list-item-avatar class="elevation-3"><img :src="app.icon" /></v-list-item-avatar>
+                  <v-list-item-avatar class="elevation-3">
+                    <img :src="app.icon" />
+                  </v-list-item-avatar>
                   <v-list-item-content>
                     <v-list-item-title>{{`${app.name} (${app.id})`}}</v-list-item-title>
                     <v-list-item-subtitle>{{app.repo}}</v-list-item-subtitle>
@@ -220,8 +230,7 @@
                   :items="box.usercfgs.httpapis.split(',')"
                   @change="saveUserCfgs"
                   label="HTTP-API (Surge)"
-                >
-                </v-select>
+                ></v-select>
                 <v-text-field
                   v-else
                   label="HTTP-API (Surge)"
@@ -231,8 +240,7 @@
                   persistent-hint
                   @change="saveUserCfgs"
                   :rules="[(val)=> /.*?@.*?:[0-9]+/.test(val) || '格式错误: examplekey@127.0.0.1:6166']"
-                >
-                </v-text-field>
+                ></v-text-field>
               </v-list-item-content>
             </v-list-item>
             <v-list-item>
@@ -242,8 +250,7 @@
                   hide-details
                   label="Language"
                   v-model="box.usercfgs.lang"
-                >
-                </v-select>
+                ></v-select>
               </v-list-item-content>
             </v-list-item>
             <v-list-item>
@@ -253,8 +260,7 @@
                   :label="$t('prefs.appearance')"
                   hide-details
                   v-model="box.usercfgs.theme"
-                >
-                </v-select>
+                ></v-select>
               </v-list-item-content>
             </v-list-item>
             <v-list-item class="mt-4" v-show="box.usercfgs.bgimgs">
@@ -267,8 +273,7 @@
                   item-text="name"
                   item-value="url"
                   v-model="box.usercfgs.bgimg"
-                >
-                </v-select>
+                ></v-select>
               </v-list-item-content>
             </v-list-item>
             <v-list-item class="mt-4">
@@ -281,11 +286,12 @@
                 class="mt-0"
                 dense
                 v-model="box.usercfgs.isTransparentIcons"
-              >
-              </v-switch>
+              ></v-switch>
               <v-spacer></v-spacer>
               <v-btn fab small text @click="open(box.syscfgs.orz3.repo)">
-                <v-avatar size="32"><img :src="box.syscfgs.orz3.icon" /></v-avatar>
+                <v-avatar size="32">
+                  <img :src="box.syscfgs.orz3.icon" />
+                </v-avatar>
               </v-btn>
             </v-list-item>
             <v-list-item class="mt-4">
@@ -297,11 +303,12 @@
                 class="mt-0"
                 dense
                 v-model="isWallpaperMode"
-              >
-              </v-switch>
+              ></v-switch>
               <v-spacer></v-spacer>
               <v-btn fab small text>
-                <v-avatar size="32"><v-icon>mdi-image</v-icon></v-avatar>
+                <v-avatar size="32">
+                  <v-icon>mdi-image</v-icon>
+                </v-avatar>
               </v-btn>
             </v-list-item>
             <v-list-item class="mt-4">
@@ -313,11 +320,12 @@
                 class="mt-0"
                 dense
                 v-model="box.usercfgs.isHidedSearchBar"
-              >
-              </v-switch>
+              ></v-switch>
               <v-spacer></v-spacer>
               <v-btn fab small text>
-                <v-avatar size="32"><v-icon>mdi-dock-top</v-icon></v-avatar>
+                <v-avatar size="32">
+                  <v-icon>mdi-dock-top</v-icon>
+                </v-avatar>
               </v-btn>
             </v-list-item>
             <v-list-item class="mt-4">
@@ -329,11 +337,12 @@
                 class="mt-0"
                 dense
                 v-model="isAutoSearchBar"
-              >
-              </v-switch>
+              ></v-switch>
               <v-spacer></v-spacer>
               <v-btn fab small text>
-                <v-avatar size="32"><v-icon>mdi-format-align-top</v-icon></v-avatar>
+                <v-avatar size="32">
+                  <v-icon>mdi-format-align-top</v-icon>
+                </v-avatar>
               </v-btn>
             </v-list-item>
             <v-list-item class="mt-4">
@@ -345,11 +354,12 @@
                 class="mt-0"
                 dense
                 v-model="box.usercfgs.isHidedNaviBottom"
-              >
-              </v-switch>
+              ></v-switch>
               <v-spacer></v-spacer>
               <v-btn fab small text>
-                <v-avatar size="32"><v-icon>mdi-dock-bottom</v-icon></v-avatar>
+                <v-avatar size="32">
+                  <v-icon>mdi-dock-bottom</v-icon>
+                </v-avatar>
               </v-btn>
             </v-list-item>
             <v-list-item class="mt-4">
@@ -361,15 +371,15 @@
                 class="mt-0"
                 dense
                 v-model="isAutoNaviBottom"
-              >
-              </v-switch>
+              ></v-switch>
               <v-spacer></v-spacer>
               <v-btn fab small text>
-                <v-avatar size="32"><v-icon>mdi-format-align-bottom</v-icon></v-avatar>
+                <v-avatar size="32">
+                  <v-icon>mdi-format-align-bottom</v-icon>
+                </v-avatar>
               </v-btn>
             </v-list-item>
-            <!-- <v-list-item class="mt-4">
-              <v-switch
+            <!-- <v-list-item class="mt-4"><v-switch
                 dense
                 class="mt-0"
                 label="透明主题"
@@ -377,13 +387,7 @@
                 @change="saveUserCfgs"
                 :persistent-hint="true"
                 hint="使界面更多元素透明 (beta)"
-              >
-              </v-switch>
-              <v-spacer></v-spacer>
-              <v-btn fab small text>
-                <v-avatar size="32"><v-icon>mdi-invert-colors</v-icon></v-avatar>
-              </v-btn>
-            </v-list-item> -->
+              ></v-switch><v-spacer></v-spacer><v-btn fab small text><v-avatar size="32"><v-icon>mdi-invert-colors</v-icon></v-avatar></v-btn></v-list-item> -->
             <v-list-item class="mt-4">
               <v-switch
                 :hint="$t('prefs.muteModeDesc')"
@@ -396,7 +400,9 @@
               ></v-switch>
               <v-spacer></v-spacer>
               <v-btn fab small text>
-                <v-avatar size="32"><v-icon>mdi-volume-off</v-icon></v-avatar>
+                <v-avatar size="32">
+                  <v-icon>mdi-volume-off</v-icon>
+                </v-avatar>
               </v-btn>
             </v-list-item>
             <v-list-item class="mt-4">
@@ -411,7 +417,9 @@
               ></v-switch>
               <v-spacer></v-spacer>
               <v-btn fab small text @click="open(box.syscfgs.boxjs.repo)">
-                <v-avatar size="32"><v-icon>mdi-help</v-icon></v-avatar>
+                <v-avatar size="32">
+                  <v-icon>mdi-help</v-icon>
+                </v-avatar>
               </v-btn>
             </v-list-item>
             <v-list-item class="mt-4">
@@ -461,7 +469,9 @@
               ></v-switch>
               <v-spacer></v-spacer>
               <v-btn fab small text>
-                <v-avatar size="32"><v-icon>mdi-code-tags</v-icon></v-avatar>
+                <v-avatar size="32">
+                  <v-icon>mdi-code-tags</v-icon>
+                </v-avatar>
               </v-btn>
             </v-list-item>
             <v-list-item class="mt-4">
@@ -476,7 +486,9 @@
               ></v-switch>
               <v-spacer></v-spacer>
               <v-btn fab small text>
-                <v-avatar size="32"><v-icon>mdi-refresh</v-icon></v-avatar>
+                <v-avatar size="32">
+                  <v-icon>mdi-refresh</v-icon>
+                </v-avatar>
               </v-btn>
             </v-list-item>
             <v-list-item class="mt-4">
@@ -491,7 +503,9 @@
               ></v-switch>
               <v-spacer></v-spacer>
               <v-btn fab small text>
-                <v-avatar size="32"><v-icon>mdi-language-html5</v-icon></v-avatar>
+                <v-avatar size="32">
+                  <v-icon>mdi-language-html5</v-icon>
+                </v-avatar>
               </v-btn>
             </v-list-item>
             <v-list-item v-if="box.usercfgs.isDebugWeb">
@@ -504,8 +518,7 @@
                   persistent-hint
                   placeholder="http://ip:port/boxjs.html"
                   v-model="box.usercfgs.debugger_web"
-                >
-                </v-text-field>
+                ></v-text-field>
               </v-list-item-content>
             </v-list-item>
             <v-list-item class="mt-4"></v-list-item>
@@ -567,7 +580,9 @@
                   <v-list dense nav class="ma-n4">
                     <template v-for="(app, appIdx) in favApps">
                       <v-list-item dense @click="switchAppView(app.id)" :key="app.id">
-                        <v-list-item-avatar class="elevation-3"><v-img :src="app.icon" /></v-list-item-avatar>
+                        <v-list-item-avatar class="elevation-3">
+                          <v-img :src="app.icon" />
+                        </v-list-item-avatar>
                         <v-list-item-content>
                           <v-list-item-title>{{app.name}} ({{app.id}})</v-list-item-title>
                           <v-list-item-subtitle>{{app.repo}}</v-list-item-subtitle>
@@ -576,7 +591,9 @@
                         <v-list-item-action>
                           <v-menu bottom left>
                             <template #activator="{ on }">
-                              <v-btn icon v-on="on"><v-icon>mdi-dots-vertical</v-icon></v-btn>
+                              <v-btn icon v-on="on">
+                                <v-icon>mdi-dots-vertical</v-icon>
+                              </v-btn>
                             </template>
                             <v-list>
                               <v-list-item dense v-if="appIdx > 0" @click="moveFav(appIdx, -1)">
@@ -607,7 +624,9 @@
                   <v-list dense nav class="ma-n4">
                     <template v-for="(app, appIdx) in sub.apps">
                       <v-list-item dense @click="switchAppView(app.id)" :key="app.id">
-                        <v-list-item-avatar class="elevation-3"><v-img :src="app.icon" /></v-list-item-avatar>
+                        <v-list-item-avatar class="elevation-3">
+                          <v-img :src="app.icon" />
+                        </v-list-item-avatar>
                         <v-list-item-content>
                           <v-list-item-title>{{app.name}} ({{app.id}})</v-list-item-title>
                           <v-list-item-subtitle>{{app.repo}}</v-list-item-subtitle>
@@ -633,7 +652,9 @@
                   <v-list dense nav class="ma-n4">
                     <template v-for="(app, appIdx) in sysApps">
                       <v-list-item dense @click="switchAppView(app.id)" :key="app.id">
-                        <v-list-item-avatar class="elevation-3"><v-img :src="app.icon" /></v-list-item-avatar>
+                        <v-list-item-avatar class="elevation-3">
+                          <v-img :src="app.icon" />
+                        </v-list-item-avatar>
                         <v-list-item-content>
                           <v-list-item-title>{{app.name}} ({{app.id}})</v-list-item-title>
                           <v-list-item-subtitle>{{app.repo}}</v-list-item-subtitle>
@@ -658,12 +679,14 @@
               <v-btn block class="primary" @click="addAppSubDialog = true">{{ $t('subs.add') }}</v-btn>
               <v-btn block class="primary" @click="open('https://chavyleung.gitbook.io/boxjs/awesome/subscriptions')">
                 <v-icon class="mr-2">mdi-cloud</v-icon>{{ $t('subs.moreSubs') }}
+              
               </v-btn>
             </template>
             <v-card v-else>
               <v-list dense nav>
                 <v-subheader inset dense>
                   {{ $t('subs.appSubs') }} ({{appSubs.length}})
+                  
                   <v-spacer></v-spacer>
                   <v-btn icon @click="open('https://chavyleung.gitbook.io/boxjs/awesome/subscriptions')">
                     <v-icon>mdi-cloud-circle</v-icon>
@@ -677,11 +700,16 @@
                 </v-subheader>
                 <template v-for="(sub, subIdx) in appSubs">
                   <v-list-item dense two-line @click="reloadAppSub(sub)" :key="sub.id">
-                    <v-list-item-avatar v-if="sub.icon"><v-img :src="sub.icon" /></v-list-item-avatar>
-                    <v-list-item-avatar v-else color="primary"><v-icon dark>mdi-account</v-icon></v-list-item-avatar>
+                    <v-list-item-avatar v-if="sub.icon">
+                      <v-img :src="sub.icon" />
+                    </v-list-item-avatar>
+                    <v-list-item-avatar v-else color="primary">
+                      <v-icon dark>mdi-account</v-icon>
+                    </v-list-item-avatar>
                     <v-list-item-content>
                       <v-list-item-title>
                         {{sub.name}} ({{sub.apps.length}})
+                        
                         <v-chip v-if="sub.isErr" color="pink" dark x-small class="ml-1 mb-1">{{ $t('subs.errData') }}</v-chip>
                       </v-list-item-title>
                       <v-list-item-subtitle>{{sub.repo ? sub.repo : sub.url}}</v-list-item-subtitle>
@@ -693,7 +721,9 @@
                     <v-list-item-action>
                       <v-menu bottom left>
                         <template #activator="{ on }">
-                          <v-btn icon v-on="on"><v-icon>mdi-dots-vertical</v-icon></v-btn>
+                          <v-btn icon v-on="on">
+                            <v-icon>mdi-dots-vertical</v-icon>
+                          </v-btn>
                         </template>
                         <v-list dense>
                           <v-list-item @click="open(sub.repo)">
@@ -752,10 +782,13 @@
             <v-card class="mx-auto">
               <v-card-title class="headline">
                 {{box.usercfgs.name ? box.usercfgs.name : $t('profile.leaveName')}}
+                
                 <v-spacer></v-spacer>
                 <v-dialog v-model="ui.editProfileDialog.show">
                   <template #activator="{ on }">
-                    <v-btn icon v-on="on"><v-icon>mdi-cog-outline</v-icon></v-btn>
+                    <v-btn icon v-on="on">
+                      <v-icon>mdi-cog-outline</v-icon>
+                    </v-btn>
                   </template>
                   <v-card>
                     <v-card-title>{{ $t('profile.editor.title') }}</v-card-title>
@@ -835,7 +868,9 @@
                     </v-list-item-subtitle>
                   </v-list-item-content>
                   <v-list-item-action>
-                    <v-btn icon><v-icon>mdi-chevron-right</v-icon></v-btn>
+                    <v-btn icon>
+                      <v-icon>mdi-chevron-right</v-icon>
+                    </v-btn>
                   </v-list-item-action>
                 </v-list-item>
               </template>
@@ -846,6 +881,7 @@
             <v-card class="mb-4">
               <v-subheader>
                 {{ $t('viewer.dataViewer') }}
+                
                 <v-spacer></v-spacer>
                 <v-btn color="primary" small @click="copy(ui.viewer.key)"> {{ $t('base.cmd.cp') }} </v-btn>
               </v-subheader>
@@ -856,8 +892,7 @@
                   persistent-hint
                   placeholder="boxjs_host"
                   v-model="ui.viewer.key"
-                >
-                </v-text-field>
+                ></v-text-field>
               </v-card-text>
               <v-divider></v-divider>
               <v-card-actions>
@@ -869,11 +904,12 @@
             <v-card class="mb-4">
               <v-subheader>
                 {{ $t('viewer.dataEditor') }}
+                
                 <v-spacer></v-spacer>
                 <v-btn color="primary" small @click="copy(ui.viewer.val)"> {{ $t('base.cmd.cp') }} </v-btn>
               </v-subheader>
               <v-card-text>
-                <v-textarea v-model="ui.viewer.val" :row="3" :label="$t('viewer.dataVal')"> </v-textarea>
+                <v-textarea v-model="ui.viewer.val" :row="3" :label="$t('viewer.dataVal')"></v-textarea>
               </v-card-text>
               <v-divider></v-divider>
               <v-card-actions>
@@ -1048,11 +1084,14 @@
             <v-card class="mx-auto" v-if="curapp.datas && curapp.datas.length > 0">
               <v-subheader>
                 {{ $t('appDetail.curSession') }}
+                
                 <a class="ml-2">{{curapp.curSession ? curapp.curSession.name : ''}}</a>
                 <v-spacer></v-spacer>
                 <v-menu bottom left>
                   <template #activator="{ on }">
-                    <v-btn icon v-on="on"><v-icon>mdi-dots-vertical</v-icon></v-btn>
+                    <v-btn icon v-on="on">
+                      <v-icon>mdi-dots-vertical</v-icon>
+                    </v-btn>
                   </template>
                   <v-list dense>
                     <v-list-item @click="copy(JSON.stringify(curapp))">
@@ -1123,7 +1162,9 @@
                 <v-spacer></v-spacer>
                 <v-menu bottom left>
                   <template #activator="{ on }">
-                    <v-btn icon v-on="on"><v-icon>mdi-dots-vertical</v-icon></v-btn>
+                    <v-btn icon v-on="on">
+                      <v-icon>mdi-dots-vertical</v-icon>
+                    </v-btn>
                   </template>
                   <v-list dense>
                     <v-dialog v-model="ui.modSessionDialog.show">
@@ -1187,8 +1228,8 @@
             <v-card class="mb-4">
               <v-subheader> {{ $t('bakDetail.title') }} </v-subheader>
               <v-card-text>
-                <v-text-field :label="$t('bakDetail.id')" v-model="curbak.id" readonly> </v-text-field>
-                <v-text-field :label="$t('bakDetail.name')" v-model="curbak.name" @change="updateGlobalBak"> </v-text-field>
+                <v-text-field :label="$t('bakDetail.id')" v-model="curbak.id" readonly></v-text-field>
+                <v-text-field :label="$t('bakDetail.name')" v-model="curbak.name" @change="updateGlobalBak"></v-text-field>
               </v-card-text>
               <v-divider></v-divider>
               <v-card-actions>
@@ -1199,6 +1240,7 @@
             <v-card class="mb-4">
               <v-subheader>
                 {{ $t('bakDetail.dataTitle') }}
+                
                 <v-spacer></v-spacer>
                 <v-btn color="primary" small @click="copy(JSON.stringify(curbak.bak))"> {{ $t('base.cmd.cp') }} </v-btn>
               </v-subheader>
@@ -1208,13 +1250,21 @@
         <!-- 底部 -->
         <v-bottom-navigation ref="naviBar" v-bind="naviBarBind" v-touch="{ down: () => isHidedNaviBottom = true }">
           <v-progress-linear :active="isLoading" height="2" absolute top indeterminate></v-progress-linear>
-          <v-btn @click="switchView('')" value="">{{ $t('menus.home') }}<v-icon>mdi-home</v-icon></v-btn>
-          <v-btn @click="switchView('app')" value="app">{{ $t('menus.apps') }}<v-icon>mdi-application</v-icon></v-btn>
-          <v-btn @click="switchView('sub')" value="sub">{{ $t('menus.subs') }}<v-icon>mdi-database</v-icon></v-btn>
+          <v-btn @click="switchView('')" value="">{{ $t('menus.home') }}
+            <v-icon>mdi-home</v-icon>
+          </v-btn>
+          <v-btn @click="switchView('app')" value="app">{{ $t('menus.apps') }}
+            <v-icon>mdi-application</v-icon>
+          </v-btn>
+          <v-btn @click="switchView('sub')" value="sub">{{ $t('menus.subs') }}
+            <v-icon>mdi-database</v-icon>
+          </v-btn>
           <v-btn @click="switchView('my')" value="my">
             <template v-if="myIcon">
               <span v-if="!isHideMyTitle">{{ $t('menus.profile') }}</span>
-              <v-avatar :size="isHideMyTitle ? 36 : 24"><v-img :src="myIcon" /></v-avatar>
+              <v-avatar :size="isHideMyTitle ? 36 : 24">
+                <v-img :src="myIcon" />
+              </v-avatar>
             </template>
             <template v-else>
               <span v-if="!isHideMyTitle">{{ $t('menus.profile') }}</span>
@@ -1250,7 +1300,9 @@
                   }
                 }"
               >
-                <v-avatar><img :src="box.syscfgs.boxjs.icons[iconThemeIdx]" /></v-avatar>
+                <v-avatar>
+                  <img :src="box.syscfgs.boxjs.icons[iconThemeIdx]" />
+                </v-avatar>
               </v-btn>
             </template>
             <v-btn dark v-if="!box.usercfgs.isHideHelp" fab small color="grey" @click="open('https://chavyleung.gitbook.io/boxjs')">
@@ -1276,7 +1328,7 @@
         <v-bottom-sheet v-model="ui.versionsheet.show" scrollable fullscreen>
           <v-card v-if="box.versions">
             <v-subheader v-touch="{ down: () => ui.versionsheet.show = false }">
-              <v-btn icon small @click="open('https://chavyleung.gitbook.io/boxjs/base/upgrade')">
+              <v-btn icon small @click="open('')">
                 <v-icon>mdi-help-circle</v-icon>
               </v-btn>
               <v-spacer></v-spacer>
@@ -1304,6 +1356,7 @@
           <v-card>
             <v-card-title v-touch="{ down: () => ui.exeScriptSheet.show = false }">
               执行结果
+              
               <v-spacer></v-spacer>
               <v-btn icon @click="ui.exeScriptSheet.show = false">
                 <v-icon>mdi-chevron-double-down</v-icon>
@@ -1321,16 +1374,16 @@
         </v-bottom-sheet>
       </v-app>
     </div>
-    <script src=""></script>
-    <script src=""></script>
-    <script src=""></script>
-    <script src=""></script>
-    <script src=""></script>
-    <script src=""></script>
-    <script src=""></script>
-    <script src=""></script>
-    <script src=""></script>
-    <script src=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-i18n@8.x/dist/vue-i18n.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.4.x/dist/vuetify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.x/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.x/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.x/dist/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@4.x/dist/timeago.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.x/dist/umd/uuidv4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-clipboard2@0.x/dist/vue-clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.20.0/min/vs/loader.js"></script>
     <script>
       Vue.prototype.timeago = timeago
       Vue.prototype.dayjs = dayjs
@@ -1507,7 +1560,7 @@
                 }
               },
               menus: {
-                home: '主页',
+                home: '偏好主页',
                 apps: '应用',
                 subs: '订阅',
                 profile: '我的'
@@ -1892,7 +1945,8 @@
           },
           // 样式
           appViewStyle() {
-            // 主题发生变化时给 <body> 设置背景色
+            // 主题发生变化时给 
+      <body> 设置背景色
             if (this.isWallpaper) {
               this.setWallpaper()
             } else {
@@ -2828,6 +2882,7 @@
           }
         }
       })
-    </script>
-  </body>
-</html>
+    
+      </script>
+    </body>
+  </html>

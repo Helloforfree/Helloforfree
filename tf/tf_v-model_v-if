@@ -1259,7 +1259,7 @@
             <v-btn dark v-if="!box.usercfgs.isHideHelp" fab small color="purple" @click="ui.versionsheet.show = true">
               <v-icon>mdi-new-box</v-icon>
             </v-btn>
-            <v-btn dark fab small color="pink" @click="box.usercfgs.isLeftBoxIcon = !box.usercfgs.isLeftBoxIcon">
+            <v-btn dark fab small color="pink" @click="box.usercfgs.isBoxIcon">
               <v-icon> {{box.usercfgs.isLeftBoxIcon ? 'mdi-format-horizontal-align-right' : 'mdi-format-horizontal-align-left'}} </v-icon>
             </v-btn>
             <v-btn dark v-if="!box.usercfgs.isHideRefresh" fab small color="orange" @click="reload()">

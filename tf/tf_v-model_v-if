@@ -1238,7 +1238,7 @@
                 text
                 @dblclick="reload()"
                 v-touch="{
-                  left: () => box.usercfgs.isLeftBoxIcon = true,
+                  left: () => box.usercfgs.isLeftBoxIcon = false,
                   right: () => box.usercfgs.isLeftBoxIcon = false,
                   up: () => {
                     clearWallpaper()

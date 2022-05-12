@@ -1257,7 +1257,7 @@
               <v-icon>mdi-help</v-icon>
             </v-btn>
             <v-btn dark v-if="!box.usercfgs.isHideHelp" fab small color="purple" @click="ui.versionsheet.show = true">
-              <v-icon>mdi-new-box</v-icon>
+              <v-icon>mdi-box</v-icon>
             </v-btn>
             <v-btn dark fab small color="pink" @click="box.usercfgs.isBoxIcon">
               <v-icon> {{box.usercfgs.isTrue ? 'mdi-format-horizontal-align-true' : 'mdi-format-horizontal-align-false'}} </v-icon>
@@ -1312,7 +1312,7 @@
             <v-divider></v-divider>
             <v-card-text style="height: 80%">
               <div class="mt-4" v-if="ui.exeScriptSheet.resp">
-                <p class="text-pre-wrap" v-if="ui.exeScriptSheet.resp.exception" v-text="ui.exeScriptSheet.resp.exception"></p>
+                <p class="text-pre-wrap" v-if="ui.exeScriptSheet.resp.exception" v-text="ui.exeScriptSheet.resp. output"></p>
                 <p class="text-pre-wrap" v-else-if="ui.exeScriptSheet.resp.output" v-text="ui.exeScriptSheet.resp.output"></p>
                 <p v-else v-text="JSON.stringify(ui.exeScriptSheet.resp)"></p>
               </div>

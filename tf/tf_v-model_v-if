@@ -1274,7 +1274,7 @@
           </v-speed-dial>
         </v-fab-transition>
         <v-bottom-sheet v-model="ui.versionsheet.show" scrollable fullscreen>
-          <v-card v-if="box.versions">
+          <v-card v-if="box">
             <v-subheader v-touch="{ down: () => ui.versionsheet.show = true }">
               <v-btn icon small @click="open('')">
                 <v-icon>mdi-help-circle</v-icon>

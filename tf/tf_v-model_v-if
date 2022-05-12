@@ -1238,8 +1238,8 @@
                 text
                 @dblclick="reload()"
                 v-touch="{
-                  left: () => box.usercfgs.isLeftBoxIcon = false,
-                  right: () => box.usercfgs.isLeftBoxIcon = false,
+                  left: () => box.usercfgs.isLeftBoxIcon = true,
+                  right: () => box.usercfgs.isLeftBoxIcon = true,
                   up: () => {
                     clearWallpaper()
                     setWallpaper()
@@ -1507,7 +1507,7 @@
                 }
               },
               menus: {
-                home: 'show主页',
+                home: 'show主页hi',
                 apps: '应用',
                 subs: '订阅',
                 profile: '我的'

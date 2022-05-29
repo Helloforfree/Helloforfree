@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>菜鸟教程(runoob.com)</title>
+<style>
+/* 打开和关闭手风琴面板的样式 */
+p.accordion {
+  background-color: #FFA500;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+ text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+ 
+/* 设置点击和鼠标移到选项上面时（悬停）的样式 */
+.active, .accordion:hover {
+  background-color: #FFA500;
+}
+ 
+/* 为手风琴面板设计样式。 默认隐藏 */
+.panel {
+  padding: 0 18px;
+  background-color: #00FF00;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/* 设置 +、- 标志 */
+.accordion:after {
+  content: '\002B';  /* Unicode 字符 + 号 002B */
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+ 
+.active:after { 
+  content: "\2212";  /* Unicode 字符 - 号 */
+}
+</style>
+</head>
+<body>
+
+<div id="container" style="width:auto">
+ 
+<div id="header" style="background-color:#FFA500;">
+<h1 style="margin-bottom:0;">主要的网页标题 
+
+<button class="accordion">Runoob1</button>
+<div class="panel">
+  <p>菜鸟教程 -- 学的不仅是技术，更是梦想！！！</p>
+
+  <p>菜鸟教程 -- 学的不仅是技术，更是梦想！！！</p>
+
+</div> </h1></div>
+ 
+<button class="accordion">Runoob 2</button>
+<div class="panel">
+  <p>菜鸟教程 -- 学的不仅是技术，更是梦想！！！</p>
+
+</div>
+ 
+<button class="accordion">Runoob 3</button>
+<div class="panel">
+  <p>菜鸟教程 -- 学的不仅是技术，更是梦想！！！</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+ 
+
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
